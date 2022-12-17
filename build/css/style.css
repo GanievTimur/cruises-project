@@ -993,6 +993,73 @@ button,
   margin-left: 20px;
 }
 
+.advantage {
+  position: relative;
+  padding: 110px 0 118px;
+}
+
+.advantage__background-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.advantage__title {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 49px;
+}
+
+.advantage__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.advantage__item {
+  background: #f9fbfd;
+  padding: 30px 30px 46px 30px;
+}
+
+.advantage__item svg {
+  fill: #011c40;
+  margin-bottom: 11px;
+}
+
+.advantage__item-subtitle {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #011c40;
+}
+
+.advantage__item-subtitle br {
+  display: none;
+}
+
+.advantage__item-description {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #011c40;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1111,6 +1178,38 @@ button,
     margin-right: 4px;
     margin-left: 0;
   }
+
+  .advantage {
+    padding: 90px 0 100px;
+  }
+
+  .advantage__list {
+    gap: 30px;
+  }
+
+  .advantage__item {
+    padding: 26px 16px 20px 18px;
+  }
+
+  .advantage__item svg {
+    height: 26px;
+  }
+
+  .advantage__item:last-child .advantage__item-subtitle {
+    margin-bottom: 20px;
+  }
+
+  .advantage__item-subtitle {
+    line-height: 140%;
+  }
+
+  .advantage__item-description {
+    line-height: 143%;
+  }
+
+  .advantage__item-description br {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1190,6 +1289,44 @@ button,
     width: 290px;
     height: 155.88px;
     margin: auto;
+  }
+
+  .advantage {
+    padding: 57px 0 67px;
+  }
+
+  .advantage__title {
+    margin-bottom: 30px;
+  }
+
+  .advantage__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .advantage__item {
+    padding: 25px 16px 19px;
+  }
+
+  .advantage__item svg {
+    margin-bottom: 13px;
+  }
+
+  .advantage__item:last-child .advantage__item-subtitle {
+    margin-bottom: 11px;
+  }
+
+  .advantage__item-subtitle {
+    margin-left: 3px;
+    margin-bottom: 8px;
+  }
+
+  .advantage__item-subtitle br {
+    display: block;
+  }
+
+  .advantage__item-description {
+    margin-left: 3px;
   }
 }
 
