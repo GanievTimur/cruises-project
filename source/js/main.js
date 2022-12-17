@@ -44,3 +44,15 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
+
+//Toggle-menu
+
+let toggleButton = document.querySelector('.header__toggle-button');
+let toggleMenu = document.querySelector('.header__wrapper');
+
+toggleMenu.classList.remove('header__wrapper--no-js');
+
+toggleButton.addEventListener('click', () => {
+  toggleMenu.classList.toggle('header__toggle-open');
+});
