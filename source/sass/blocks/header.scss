@@ -1,3 +1,15 @@
+.header {
+  min-height: 650px;
+
+  @media (max-width: 1023px) {
+    min-height: 638px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: 500px;
+  }
+}
+
 .header__background-image {
   position: absolute;
   top: 0;

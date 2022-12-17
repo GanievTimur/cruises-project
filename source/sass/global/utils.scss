@@ -88,3 +88,21 @@
     display: none;
   }
 }
+
+.title {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  color: #011c40;
+
+  @media (max-width: 1023px) {
+    font-size: 26px;
+    line-height: 150%;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+}

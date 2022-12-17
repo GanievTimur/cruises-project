@@ -648,6 +648,15 @@ button,
   transition: 0.2s;
 }
 
+.title {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  color: #011c40;
+}
+
 .container {
   width: 85%;
   max-width: 1160px;
@@ -791,6 +800,10 @@ button,
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+}
+
+.header {
+  min-height: 650px;
 }
 
 .header__background-image {
@@ -942,6 +955,44 @@ button,
   display: block;
 }
 
+.traveling {
+  background-color: #ffffff;
+  padding: 120px 0 145px 0;
+}
+
+.traveling__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.traveling__description {
+  width: 45%;
+}
+
+.traveling__description-title {
+  margin: 56px 0 24px;
+}
+
+.traveling__description-info {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #011c40;
+}
+
+.traveling__content-image {
+  width: 560px;
+  height: 301px;
+  margin-left: 20px;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -989,8 +1040,17 @@ button,
     line-height: 17px;
   }
 
+  .title {
+    font-size: 26px;
+    line-height: 150%;
+  }
+
   .container {
     width: 88%;
+  }
+
+  .header {
+    min-height: 638px;
   }
 
   .header__background-image {
@@ -1031,11 +1091,35 @@ button,
     line-height: 22px;
     text-shadow: none;
   }
+
+  .traveling {
+    padding: 100px 0 93px;
+  }
+
+  .traveling__description {
+    width: 48%;
+  }
+
+  .traveling__description-title {
+    margin: -9px -1px 15px;
+    line-height: 140%;
+  }
+
+  .traveling__content-image {
+    width: 324px;
+    height: 174.15px;
+    margin-right: 4px;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 767px) {
   .nav-link {
     display: none;
+  }
+
+  .title {
+    font-size: 24px;
   }
 
   .container {
@@ -1053,6 +1137,10 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .header {
+    min-height: 500px;
   }
 
   .header__background-image {
@@ -1080,6 +1168,28 @@ button,
 
   .header__toggle-button {
     display: block;
+  }
+
+  .traveling {
+    padding: 66px 0 85px;
+  }
+
+  .traveling__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .traveling__description {
+    width: 100%;
+    margin-bottom: 44px;
+  }
+
+  .traveling__content-image {
+    width: 290px;
+    height: 155.88px;
+    margin: auto;
   }
 }
 
