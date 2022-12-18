@@ -1060,6 +1060,120 @@ button,
   color: #011c40;
 }
 
+.cruises {
+  background-color: #ffffff;
+  padding: 87px 0 120px;
+}
+
+.cruises .container {
+  width: 83%;
+}
+
+.cruises__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.cruises__item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-height: 386px;
+}
+
+.cruises__item h3 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #f9fbfd;
+  margin: 0;
+}
+
+.cruises__item-front-title {
+  position: absolute;
+  bottom: 6%;
+  left: 12%;
+  margin: 0;
+}
+
+.cruises__title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 49px;
+}
+
+.cruises__item-front-image {
+  width: 100%;
+  height: 386px;
+}
+
+.cruises__item-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  z-index: 1;
+  padding: 20px;
+  background: #011c40;
+  -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  top: 100%;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.cruises__item:hover .cruises__item-back {
+  top: 0%;
+}
+
+.cruises__item-back-description {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #d8d8d9;
+  margin: 0;
+}
+
+.cruises__item-back-description span {
+  color: #f9fbfd;
+}
+
+.cruises__item-back-button {
+  width: 100%;
+  height: 40px;
+  background: #f9fbfd;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #011c40;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1210,6 +1324,24 @@ button,
   .advantage__item-description br {
     display: none;
   }
+
+  .cruises {
+    padding: 90px 0 100px;
+  }
+
+  .cruises .container {
+    width: 84%;
+  }
+
+  .cruises__list {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cruises__item-front-title {
+    bottom: 27px;
+    left: 33px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1327,6 +1459,24 @@ button,
 
   .advantage__item-description {
     margin-left: 3px;
+  }
+
+  .cruises {
+    padding: 56px 0 65px;
+  }
+
+  .cruises__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .cruises__item-front-title {
+    bottom: 17px;
+    left: 24px;
+  }
+
+  .cruises__title {
+    margin-bottom: 30px;
   }
 }
 

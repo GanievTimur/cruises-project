@@ -1,0 +1,135 @@
+.cruises {
+  background-color: #ffffff;
+  padding: 87px 0 120px;
+
+  @media (max-width: 1023px) {
+    padding: 90px 0 100px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 56px 0 65px;
+  }
+}
+
+.cruises .container {
+  width: 83%;
+
+  @media (max-width: 1023px) {
+    width: 84%;
+  }
+}
+
+.cruises__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cruises__item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-height: 386px;
+
+  & h3 {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #f9fbfd;
+    margin: 0;
+  }
+}
+
+.cruises__item-front-title {
+  position: absolute;
+  bottom: 6%;
+  left: 12%;
+  margin: 0;
+
+  @media (max-width: 1023px) {
+    bottom: 27px;
+    left: 33px;
+  }
+
+  @media (max-width: 767px) {
+    bottom: 17px;
+    left: 24px;
+  }
+}
+
+.cruises__title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 49px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+
+.cruises__item-front-image {
+  width: 100%;
+  height: 386px;
+}
+
+.cruises__item-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  z-index: 1;
+  padding: 20px;
+  background: #011c40;
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cruises__item:hover .cruises__item-back {
+  top: 0%;
+}
+
+.cruises__item-back-description {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #d8d8d9;
+  margin: 0;
+
+  & span {
+    color: #f9fbfd;
+  }
+}
+
+.cruises__item-back-button {
+  width: 100%;
+  height: 40px;
+  background: #f9fbfd;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #011c40;
+}
