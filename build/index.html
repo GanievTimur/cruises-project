@@ -315,6 +315,40 @@
         </div>
       </section>
 
+      <section class="booking">
+        <picture>
+          <source media="(min-width: 0)" type="image/webp" srcset="./img/booking-background.webp 1x, ./img/booking-background@2x.webp 2x">
+          <img class="booking__background-image" src="./img/booking-background.jpg" srcset="./img/booking-background@2x.jpg 2x" alt="Фотография заснеженных гор" width="1366" height="555">
+        </picture>
+        <div class="container">
+          <div class="booking__description">
+            <h2 class="booking__description-title">Раннее бронирование</h2>
+            <p class="booking__description-info">Забронируйте тур <nobr>за 3-6 месяцев</nobr> до&nbsp;даты выезда и сэкономьте до 50%</p>
+          </div>
+          <form class="booking__form" action="#" method="post">
+            <p class="booking__form-info">Оставьте&nbsp;заявку и&nbsp;мы&nbsp;свяжемся с вами в&nbsp;ближайшее&nbsp;время</p>
+            <fieldset>
+              <label for="name-form" class="visually-hidden">Поле ввода имени</label>
+              <input type="text" name="name" class="booking__form-username" id="name-form" placeholder="Имя" required>
+            </fieldset>
+            <fieldset>
+              <label for="phone-form" class="visually-hidden">Поле ввода телефона</label>
+              <input type="tel" name="phone" class="booking__form-phone" id="phone-form" placeholder="Телефон" required>
+            </fieldset>
+            <fieldset>
+              <label for="email-form" class="visually-hidden">Поле ввода почты</label>
+              <input type="tel" name="email" class="booking__form-email" id="email-form" placeholder="Email" required>
+            </fieldset>
+            <div class="booking__form-checkbox">
+              <input type="checkbox" name="checkbox" class="booking__form-checkbox-input visually-hidden" id="checkbox-form" required>
+              <span></span>
+              <label for="checkbox-form" class="booking__form-checkbox-label">Я&nbsp;согласен&nbsp;на&nbsp;обработку моих&nbsp;персональных&nbsp;данных</label>
+            </div>
+            <button class="booking__form-button" type="submit">Оставить заявку</button>
+          </form>
+        </div>
+      </section>
+
     </main>
 
     <script src="js/vendor.min.js"></script>
