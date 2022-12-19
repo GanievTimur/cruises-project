@@ -1278,19 +1278,19 @@ button,
   margin-bottom: 30px;
 }
 
-.booking__form-checkbox span {
-  display: inline-block;
-  vertical-align: middle;
+.booking__form-checkbox-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   position: relative;
-  left: 0;
-  top: 0;
   width: 18px;
   height: 18px;
-  background: #f9fbfd;
+  cursor: pointer;
+  background-color: #f9fbfd;
   margin-right: 5px;
 }
 
-.booking__form-checkbox-input:checked + span::before {
+.booking__form-checkbox-input:checked::before {
   content: "";
   background-image: url("../img/svg/checkbox-icon.svg");
   background-repeat: no-repeat;
@@ -1703,10 +1703,10 @@ button,
     margin-bottom: 26px;
   }
 
-  .booking__form-checkbox span {
-    width: 28px;
+  .booking__form-checkbox-input {
+    margin-right: 9px;
+    width: 27px;
     height: 19px;
-    margin-right: 7px;
   }
 
   .booking__form fieldset:last-of-type {

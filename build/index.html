@@ -329,19 +329,18 @@
             <p class="booking__form-info">Оставьте&nbsp;заявку и&nbsp;мы&nbsp;свяжемся с вами в&nbsp;ближайшее&nbsp;время</p>
             <fieldset>
               <label for="name-form" class="visually-hidden">Поле ввода имени</label>
-              <input type="text" name="name" class="booking__form-username" id="name-form" placeholder="Имя" required>
+              <input type="text" name="name" class="booking__form-username" id="name-form" placeholder="Имя" pattern="^[А-Яа-яЁё\s]+$" required>
             </fieldset>
             <fieldset>
               <label for="phone-form" class="visually-hidden">Поле ввода телефона</label>
-              <input type="tel" name="phone" class="booking__form-phone" id="phone-form" placeholder="Телефон" required>
+              <input type="tel" name="phone" class="booking__form-phone" id="phone-form" placeholder="Телефон" maxlength="11" pattern="[8][0-9]{10}" required>
             </fieldset>
             <fieldset>
               <label for="email-form" class="visually-hidden">Поле ввода почты</label>
-              <input type="tel" name="email" class="booking__form-email" id="email-form" placeholder="Email" required>
+              <input type="email" name="email" class="booking__form-email" id="email-form" placeholder="Email" required>
             </fieldset>
             <div class="booking__form-checkbox">
-              <input type="checkbox" name="checkbox" class="booking__form-checkbox-input visually-hidden" id="checkbox-form" required>
-              <span></span>
+              <input type="checkbox" name="checkbox" class="booking__form-checkbox-input" id="checkbox-form" required>
               <label for="checkbox-form" class="booking__form-checkbox-label">Я&nbsp;согласен&nbsp;на&nbsp;обработку моих&nbsp;персональных&nbsp;данных</label>
             </div>
             <button class="booking__form-button" type="submit">Оставить заявку</button>
