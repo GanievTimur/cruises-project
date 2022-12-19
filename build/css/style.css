@@ -1326,6 +1326,80 @@ button,
   color: #011c40;
 }
 
+.contacts {
+  padding: 120px 0;
+  background-color: #ffffff;
+}
+
+.contacts .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.contacts__map {
+  width: 560px;
+  height: 306px;
+}
+
+.contacts__description {
+  width: 43%;
+  margin-left: 20px;
+}
+
+.contacts__description-title {
+  margin: 74px 0 33px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #011c40;
+}
+
+.contacts__description-adress,
+.contacts__description-phone {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #011c40;
+}
+
+.contacts__description-adress {
+  padding-left: 27px;
+  margin-bottom: 22px;
+}
+
+.contacts__description-phone {
+  display: block;
+  padding-left: 27px;
+}
+
+.contacts__description-adress::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 22px;
+  background-image: url("../img/svg/adress-mark-icon.svg");
+  background-repeat: no-repeat;
+  margin-left: -28px;
+}
+
+.contacts__description-phone::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 22px;
+  background-image: url("../img/svg/phone-icon.svg");
+  background-repeat: no-repeat;
+  margin-left: -28px;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1532,6 +1606,35 @@ button,
     width: 59.6%;
     min-width: inherit;
   }
+
+  .contacts {
+    padding: 100px 0;
+  }
+
+  .contacts__map {
+    width: 324px;
+    height: 335px;
+  }
+
+  .contacts__description {
+    width: 48%;
+  }
+
+  .contacts__description-title {
+    margin: 66px 1px 27px;
+  }
+
+  .contacts__description-adress {
+    padding-left: 29px;
+  }
+
+  .contacts__description-phone {
+    padding-left: 29px;
+  }
+
+  .contacts__description-adress::before {
+    margin-top: 5px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1670,7 +1773,7 @@ button,
   }
 
   .booking {
-    padding: 20px 0 100px;
+    padding: 20px 0 65px;
   }
 
   .booking__description {
@@ -1711,6 +1814,33 @@ button,
 
   .booking__form fieldset:last-of-type {
     margin-bottom: 18px;
+  }
+
+  .contacts {
+    padding: 58px 0 65px;
+  }
+
+  .contacts .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    width: 91%;
+  }
+
+  .contacts__map {
+    width: 100%;
+    height: 316px;
+  }
+
+  .contacts__description {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
+
+  .contacts__description-title {
+    margin: 0 1px 27px;
   }
 }
 

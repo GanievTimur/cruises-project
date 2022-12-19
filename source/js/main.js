@@ -56,3 +56,26 @@ toggleMenu.classList.remove('header__wrapper--no-js');
 toggleButton.addEventListener('click', () => {
   toggleMenu.classList.toggle('header__toggle-open');
 });
+
+//Google Map
+
+let center = [59.93863506417266,30.323117499999945];
+
+function init () {
+  let map = new ymaps.Map('map', {
+    center: center,
+    zoom: 17
+  });
+
+  let placemark = new ymaps.Placemark([59.93863506417266,30.323117499999945], {}, {
+    iconLayout: 'default#image',
+		iconImageHref: 'img/svg/adress-mark-icon.svg',
+		iconImageSize: [18, 22],
+		iconImageOffset: [0, 0]
+  });
+
+  map.geoObjects.add(placemark);
+}
+
+
+ymaps.ready(init);
