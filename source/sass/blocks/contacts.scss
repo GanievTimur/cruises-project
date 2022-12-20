@@ -92,6 +92,10 @@
   display: block;
   padding-left: 27px;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
   @media (max-width: 1023px) {
     padding-left: 29px;
   }

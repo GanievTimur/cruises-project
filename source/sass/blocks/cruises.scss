@@ -43,6 +43,11 @@
   overflow: hidden;
   min-height: 386px;
 
+  &:hover {
+    box-shadow: 6px 6px #7695c4;
+    transition: 0.5s;
+  }
+
   & h3 {
     font-family: "Montserrat", "Arial", sans-serif;
     font-style: normal;

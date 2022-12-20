@@ -45,7 +45,7 @@
   fill: #f9fbfd;
 
   &:hover {
-    fill: #011c40;
+    fill: #7695c4;
     transition: 0.1s;
   }
 
@@ -68,6 +68,10 @@
     align-items: start;
     padding-bottom: 0;
     margin-top: -2px;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
   }
 }
 

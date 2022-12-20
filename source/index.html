@@ -27,16 +27,16 @@
         </a>
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a href="#" class="header__nav-link nav-link">Преимущества</a>
+            <a href="#advantage" class="header__nav-link nav-link">Преимущества</a>
           </li>
           <li class="header__nav-item">
-            <a href="#" class="header__nav-link nav-link">Направления</a>
+            <a href="#cruises" class="header__nav-link nav-link">Направления</a>
           </li>
           <li class="header__nav-item">
-            <a href="#" class="header__nav-link nav-link">Ближайшие круизы</a>
+            <a href="#booking" class="header__nav-link nav-link">Ближайшие круизы</a>
           </li>
           <li class="header__nav-item">
-            <a href="#" class="header__nav-link nav-link">Контакты</a>
+            <a href="#contacts" class="header__nav-link nav-link">Контакты</a>
           </li>
         </ul>
         <svg class="header__logo-mobile" width="38" height="20">
@@ -74,7 +74,7 @@
         </div>
       </section>
 
-      <section class="advantage">
+      <section class="advantage" id="advantage">
         <picture>
           <source media="(min-width: 0)" type="image/webp" srcset="./img/advantage-background.webp 1x, ./img/advantage-background@2x.webp 2x">
           <img class="advantage__background-image" src="./img/advantage-background.jpg" srcset="./img/advantage-background@2x.jpg 2x" alt="Фотография заснеженных гор" width="1366" height="562">
@@ -107,7 +107,7 @@
         </div>
       </section>
 
-      <section class="cruises">
+      <section class="cruises" id="cruises">
         <div class="container">
           <h2 class="cruises__title title">Ближайшие круизы</h2>
           <ul class="cruises__list">
@@ -133,7 +133,7 @@
                 <p class="cruises__item-back-description">
                   <span>Цена</span><br>от 11500 $
                 </p>
-                <button class="cruises__item-back-button">Забронировать</button>
+                <button class="cruises__item-back-button" type="button">Забронировать</button>
               </div>
             </li>
             <li class="cruises__item">
@@ -158,7 +158,7 @@
                 <p class="cruises__item-back-description">
                   <span>Цена</span><br>от 14500 $
                 </p>
-                <button class="cruises__item-back-button">Забронировать</button>
+                <button class="cruises__item-back-button" type="button">Забронировать</button>
               </div>
             </li>
             <li class="cruises__item">
@@ -183,7 +183,7 @@
                 <p class="cruises__item-back-description">
                   <span>Цена</span><br>от 14500 $
                 </p>
-                <button class="cruises__item-back-button">Забронировать</button>
+                <button class="cruises__item-back-button" type="button">Забронировать</button>
               </div>
             </li>
             <li class="cruises__item">
@@ -233,7 +233,7 @@
                 <p class="cruises__item-back-description">
                   <span>Цена</span><br>от 18600 $
                 </p>
-                <button class="cruises__item-back-button">Забронировать</button>
+                <button class="cruises__item-back-button" type="button">Забронировать</button>
               </div>
             </li>
             <li class="cruises__item">
@@ -258,7 +258,7 @@
                 <p class="cruises__item-back-description">
                   <span>Цена</span><br>от 11700 $
                 </p>
-                <button class="cruises__item-back-button">Забронировать</button>
+                <button class="cruises__item-back-button" type="button">Забронировать</button>
               </div>
             </li>
             <li class="cruises__item">
@@ -283,7 +283,7 @@
                 <p class="cruises__item-back-description">
                   <span>Цена</span><br>от 12500 $
                 </p>
-                <button class="cruises__item-back-button">Забронировать</button>
+                <button class="cruises__item-back-button" type="button">Забронировать</button>
               </div>
             </li>
             <li class="cruises__item">
@@ -308,14 +308,14 @@
                 <p class="cruises__item-back-description">
                   <span>Цена</span><br>от 12500 $
                 </p>
-                <button class="cruises__item-back-button">Забронировать</button>
+                <button class="cruises__item-back-button" type="button">Забронировать</button>
               </div>
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="booking">
+      <section class="booking" id="booking">
         <picture>
           <source media="(min-width: 0)" type="image/webp" srcset="./img/booking-background.webp 1x, ./img/booking-background@2x.webp 2x">
           <img class="booking__background-image" src="./img/booking-background.jpg" srcset="./img/booking-background@2x.jpg 2x" alt="Фотография заснеженных гор" width="1366" height="555">
@@ -348,7 +348,7 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <div class="contacts__map" id="map"></div>
           <div class="contacts__description">
@@ -361,6 +361,48 @@
       </section>
 
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <a href="index.html" class="footer__logo">
+          <svg width="70" height="38">
+            <use href="./img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item">
+            <a href="#advantage" class="footer__nav-link nav-link">Преимущества</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#cruises" class="footer__nav-link nav-link">Направления</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#booking" class="footer__nav-link nav-link">Ближайшие круизы</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#contacts" class="footer__nav-link nav-link">Контакты</a>
+          </li>
+        </ul>
+        <ul class="footer__social-list">
+          <li class="footer__social-item"><a href="#" class="footer__social-link">
+            <svg width="20" height="20">
+              <use href="./img/sprite/sprite.svg#social-ok-icon"></use>
+            </svg>
+          </a></li>
+          <li class="footer__social-item"><a href="#" class="footer__social-link">
+            <svg width="20" height="20">
+              <use href="./img/sprite/sprite.svg#social-circle-icon"></use>
+            </svg>
+          </a></li>
+          <li class="footer__social-item"><a href="#" class="footer__social-link">
+            <svg width="20" height="20">
+              <use href="./img/sprite/sprite.svg#social-head-icon"></use>
+            </svg>
+          </a></li>
+        </ul>
+      </div>
+    </footer>
+
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=76945897-52fa-439e-9763-06c703309df2"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
