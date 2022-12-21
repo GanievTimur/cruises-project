@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // используйте .closest(el)
 
 
-//Toggle-menu
+// Toggle-menu
 
 let toggleButton = document.querySelector('.header__toggle-button');
 let toggleMenu = document.querySelector('.header__wrapper');
@@ -57,25 +57,19 @@ toggleButton.addEventListener('click', () => {
   toggleMenu.classList.toggle('header__toggle-open');
 });
 
-//Google Map
+// Google Map
 
-let center = [59.93863506417266,30.323117499999945];
-
-function init () {
+function init() {
   let map = new ymaps.Map('map', {
-    center: center,
-    zoom: 17
+    center: [59.93863506417266, 30.323117499999945],
+    zoom: 17,
   });
 
-  let placemark = new ymaps.Placemark([59.93863506417266,30.323117499999945], {}, {
-    iconLayout: 'default#image',
-		iconImageHref: 'img/svg/adress-mark-icon.svg',
-		iconImageSize: [18, 22],
-		iconImageOffset: [0, 0]
+  let placemark = new ymaps.Placemark([59.93863506417266, 30.323117499999945], {}, {
+    iconLayout: 'default#image', iconImageHref: 'img/svg/adress-mark-icon.svg', iconImageSize: [18, 22], iconImageOffset: [0, 0],
   });
 
   map.geoObjects.add(placemark);
 }
-
 
 ymaps.ready(init);
