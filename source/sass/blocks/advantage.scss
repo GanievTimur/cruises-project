@@ -1,6 +1,7 @@
 .advantage {
   position: relative;
   padding: 110px 0 118px;
+  background-color: #5586c5;
 
   @media (max-width: 1023px) {
     padding: 90px 0 100px;
@@ -11,13 +12,17 @@
   }
 }
 
+.advantage .container {
+  position: inherit;
+  z-index: 2;
+}
+
 .advantage__background-image {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
 }
 
 .advantage__title {

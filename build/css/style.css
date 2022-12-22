@@ -997,6 +997,12 @@ button,
 .advantage {
   position: relative;
   padding: 110px 0 118px;
+  background-color: #5586c5;
+}
+
+.advantage .container {
+  position: inherit;
+  z-index: 2;
 }
 
 .advantage__background-image {
@@ -1006,7 +1012,6 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  z-index: -1;
 }
 
 .advantage__title {
@@ -1190,6 +1195,7 @@ button,
 .booking {
   position: relative;
   padding: 50px 65px 50px 0;
+  background-color: #ffffff;
 }
 
 .booking .container {
@@ -1199,6 +1205,8 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: inherit;
+  z-index: 2;
 }
 
 .booking__description {
@@ -1210,7 +1218,6 @@ button,
   width: 100%;
   top: 0;
   right: 0;
-  z-index: -1;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -1254,7 +1261,7 @@ button,
   margin-bottom: 20px;
 }
 
-fieldset input {
+.booking__form-fieldset input {
   height: 43px;
   width: 100%;
   padding-left: 16px;
