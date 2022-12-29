@@ -38,16 +38,17 @@
 
 .contacts__description {
   width: 43%;
-  margin-left: 20px;
+  margin-left: 40px;
 
   @media (max-width: 1023px) {
     width: 48%;
+    margin-left: 28px;
   }
 
   @media (max-width: 767px) {
     width: 100%;
     margin-left: 0;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 }
 
@@ -81,7 +82,7 @@
 
 .contacts__description-adress {
   padding-left: 27px;
-  margin-bottom: 22px;
+  margin-bottom: 12px;
 
   @media (max-width: 1023px) {
     padding-left: 29px;
@@ -89,8 +90,10 @@
 }
 
 .contacts__description-phone {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   padding-left: 27px;
+  margin: 10px 15px 10px 0;
 
   &:hover {
     opacity: 0.6;

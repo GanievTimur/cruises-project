@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   min-height: 650px;
 
   @media (max-width: 1023px) {
@@ -14,7 +15,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 650px;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
 
@@ -41,13 +42,12 @@
   }
 }
 
+.header__logo {
+  margin-right: auto;
+}
+
 .header__logo svg {
   fill: #f9fbfd;
-
-  &:hover {
-    fill: #7695c4;
-    transition: 0.1s;
-  }
 
   @media (max-width: 1023px) {
     width: 38px;
@@ -117,10 +117,7 @@
   line-height: 24px;
   color: #f9fbfd;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
-  & br {
-    display: none;
-  }
+  margin-bottom: 30px;
 
   @media (max-width: 1023px) {
     margin-left: 0;
@@ -132,83 +129,10 @@
   @media (max-width: 767px) {
     font-size: 16px;
     line-height: 140%;
+    width: 80%;
 
     & br {
       display: block;
     }
   }
-}
-
-.header__toggle-button {
-  display: none;
-  position: relative;
-  width: 23px;
-  height: 22px;
-  cursor: pointer;
-  background: inherit;
-  border: none;
-
-  & svg {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-  }
-
-  @media (max-width: 767px) {
-    display: block;
-  }
-}
-
-.header__toggle-open .header__nav-list,
-.header__wrapper--no-js .header__nav-list {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 89%;
-  height: 100%;
-  background: #f9fbfd;
-  padding: 75px 15px 15px 15px;
-  z-index: 4;
-}
-
-.header__toggle-open .header__nav-link,
-.header__wrapper--no-js .header__nav-link {
-  display: block;
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #011c40;
-  padding: 10px;
-  margin-left: 0;
-}
-
-.header__toggle-open .header__nav-item,
-.header__wrapper--no-js .header__nav-item {
-  margin-bottom: 10px;
-}
-
-.header__toggle-open .header__logo-mobile,
-.header__wrapper--no-js .header__logo-mobile {
-  position: absolute;
-  top: 21px;
-  left: 20%;
-}
-
-.header__wrapper--no-js .header__logo-mobile {
-  display: block;
-}
-
-.header__toggle-button-close,
-.header__logo-mobile {
-  display: none;
-  z-index: 6;
-}
-
-.header__toggle-open .header__toggle-button-close,
-.header__toggle-open .header__logo-mobile {
-  display: block;
 }

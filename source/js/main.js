@@ -48,13 +48,44 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Toggle-menu
 
-let toggleButton = document.querySelector('.header__toggle-button');
-let toggleMenu = document.querySelector('.header__wrapper');
+const header = document.querySelector('.header__wrapper');
+const menu = document.querySelector('.mobile-menu');
+const pageBody = document.querySelector('.page-body');
+let openButton = header.querySelector('.mobile-menu__button');
+let toggleMenu = document.querySelector('.mobile-wrapper');
+let closeButton = menu.querySelector('.mobile-menu__button');
 
-toggleMenu.classList.remove('header__wrapper--no-js');
+header.classList.remove('mobile-wrapper--no-js');
+toggleMenu.classList.remove('mobile-wrapper--no-js');
+toggleMenu.classList.add('visually-hidden');
 
-toggleButton.addEventListener('click', () => {
-  toggleMenu.classList.toggle('header__toggle-open');
+openButton.addEventListener('click', () => {
+  if(toggleMenu.classList.contains('visually-hidden')) {
+    toggleMenu.classList.remove('visually-hidden');
+    pageBody.classList.add('scroll-hidden');
+  } else {
+    toggleMenu.classList.add('visually-hidden');
+    pageBody.classList.remove('scroll-hidden');
+  }
+  
+});
+
+closeButton.addEventListener('click', () => {
+  if(toggleMenu.classList.contains('visually-hidden')) {
+    toggleMenu.classList.remove('visually-hidden');
+    pageBody.classList.add('scroll-hidden');
+  } else {
+    toggleMenu.classList.add('visually-hidden');
+    pageBody.classList.remove('scroll-hidden');
+  }
+  
+});
+
+toggleMenu.addEventListener('click', (e) => {
+  if(!e.target.closest('.mobile-menu')) {
+    toggleMenu.classList.add('visually-hidden');
+    pageBody.classList.remove('scroll-hidden');
+  }
 });
 
 // Google Map
@@ -64,10 +95,20 @@ function init() {
     center: [59.93863506417266, 30.323117499999945],
     zoom: 17,
   });
+  
+  map.controls.remove('geolocationControl'); // удаляем геолокацию
+  map.controls.remove('searchControl'); // удаляем поиск
+  map.controls.remove('trafficControl'); // удаляем контроль трафика
+  map.controls.remove('typeSelector'); // удаляем тип
+  map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+  map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+  map.controls.remove('rulerControl'); // удаляем контрол правил
+  map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 
   let placemark = new ymaps.Placemark([59.93863506417266, 30.323117499999945], {}, {
     iconLayout: 'default#image', iconImageHref: 'img/svg/adress-mark-icon.svg', iconImageSize: [18, 22], iconImageOffset: [0, 0],
   });
+
 
   map.geoObjects.add(placemark);
 }

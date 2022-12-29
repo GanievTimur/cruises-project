@@ -12,19 +12,19 @@
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
-  <body>
+  <body class="page-body">
 
     <header class="header">
       <picture>
         <source media="(min-width: 0)" type="image/webp" srcset="./img/hero-background-image.webp 1x, ./img/hero-background-image@2x.webp 2x">
         <img class="header__background-image" src="./img/hero-background-image.jpg" srcset="./img/hero-background-image@2x.jpg 2x" alt="Фотография заснеженных гор" width="1366" height="650">
       </picture>
-      <div class="header__wrapper container header__wrapper--no-js">
-        <a href="index.html" class="header__logo">
+      <div class="header__wrapper container mobile-wrapper--no-js">
+        <div class="header__logo">
           <svg width="70" height="38">
             <use href="./img/sprite/sprite.svg#logo"></use>
           </svg>
-        </a>
+        </div>
         <ul class="header__nav-list">
           <li class="header__nav-item">
             <a href="#advantage" class="header__nav-link nav-link">Преимущества</a>
@@ -39,27 +39,19 @@
             <a href="#contacts" class="header__nav-link nav-link">Контакты</a>
           </li>
         </ul>
-        <a href="index.html" class="header__logo">
-          <svg class="header__logo-mobile" width="38" height="20">
-            <use href="./img/sprite/sprite.svg#logo"></use>
-          </svg>
-        </a>
-        <button class="header__toggle-button" type="button">
-          <svg class="header__toggle-button-open" width="24" height="12">
+        <button class="header__button mobile-menu__button" type="button">
+          <svg class="mobile-menu__button-open" width="24" height="16">
             <use href="./img/sprite/sprite.svg#toggle-menu-icon-open"></use>
-          </svg>
-          <svg class="header__toggle-button-close" width="24" height="12">
-            <use href="./img/sprite/sprite.svg#toggle-menu-icon-close"></use>
           </svg>
         </button>
       </div>
       <div class="container">
         <h1 class="header__title">Круизы в&nbsp;Антарктику</h1>
-        <p class="header__subtitle">Волшебный мир<br> айсбергов и пингвинов</p>
+        <p class="header__subtitle">Волшебный мир айсбергов и пингвинов</p>
       </div>
     </header>
 
-    <main>
+    <main class="page-main">
 
       <section class="traveling">
         <div class="traveling__wrapper container">
@@ -325,17 +317,17 @@
         <div class="container">
           <div class="booking__description">
             <h2 class="booking__description-title">Раннее бронирование</h2>
-            <p class="booking__description-info">Забронируйте тур за&nbsp;3&#8209;6&nbsp;месяцев до&nbsp;даты выезда и сэкономьте до 50%</p>
+            <p class="booking__description-info">Забронируйте тур за&nbsp;3&#8209;6&nbsp;месяцев до&nbsp;даты выезда и сэкономьте&nbsp;до&nbsp;50%</p>
           </div>
           <form class="booking__form" action="#" method="post">
             <p class="booking__form-info">Оставьте&nbsp;заявку и&nbsp;мы&nbsp;свяжемся с вами в&nbsp;ближайшее&nbsp;время</p>
             <fieldset class="booking__form-fieldset">
               <label for="name-form" class="visually-hidden">Поле ввода имени</label>
-              <input type="text" name="name" class="booking__form-username" id="name-form" placeholder="Имя" pattern="^[А-Яа-яЁё\s]+$" required>
+              <input type="text" name="name" class="booking__form-username" id="name-form" placeholder="Имя" required>
             </fieldset>
             <fieldset class="booking__form-fieldset">
               <label for="phone-form" class="visually-hidden">Поле ввода телефона</label>
-              <input type="tel" name="phone" class="booking__form-phone" id="phone-form" placeholder="Телефон" maxlength="11" pattern="[8][0-9]{10}" required>
+              <input type="tel" name="phone" class="booking__form-phone" id="phone-form" placeholder="Телефон" maxlength="11" pattern="^[ 0-9]+$" required>
             </fieldset>
             <fieldset class="booking__form-fieldset">
               <label for="email-form" class="visually-hidden">Поле ввода почты</label>
@@ -366,11 +358,11 @@
 
     <footer class="footer">
       <div class="container">
-        <a href="index.html" class="footer__logo">
+        <div class="footer__logo">
           <svg width="70" height="38">
             <use href="./img/sprite/sprite.svg#logo"></use>
           </svg>
-        </a>
+        </div>
         <ul class="footer__nav-list">
           <li class="footer__nav-item">
             <a href="#advantage" class="footer__nav-link nav-link">Преимущества</a>
@@ -404,6 +396,35 @@
         </ul>
       </div>
     </footer>
+
+    <div class="mobile-wrapper mobile-wrapper--no-js">
+      <div class="mobile-menu">
+        <div class="mobile-menu__logo">
+          <svg width="38" height="20">
+            <use href="./img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </div>
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link nav-link">Преимущества</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link nav-link">Направления</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link nav-link">Ближайшие круизы</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link nav-link">Контакты</a>
+          </li>
+        </ul>
+        <button class="mobile-menu__button" type="button">
+          <svg class="mobile-menu__button-close" width="24" height="16">
+            <use href="./img/sprite/sprite.svg#toggle-menu-icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=76945897-52fa-439e-9763-06c703309df2"></script>
     <script src="js/vendor.min.js"></script>

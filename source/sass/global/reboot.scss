@@ -34,6 +34,15 @@ body {
   background: #011c40;
 }
 
+.page-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main {
+  flex: 1 1 auto;
+}
+
 a {
   color: $color-default-black;
   text-decoration: none;
@@ -126,4 +135,8 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+.scroll-hidden {
+  overflow: hidden;
 }
