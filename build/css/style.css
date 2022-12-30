@@ -1554,6 +1554,7 @@ button,
 .mobile-wrapper--no-js .mobile-menu__list {
   text-align: end;
   margin: 0;
+  display: none;
 }
 
 .mobile-wrapper--no-js .mobile-menu__link {
@@ -2106,6 +2107,10 @@ button,
   }
 
   .mobile-menu__button {
+    display: block;
+  }
+
+  .mobile-wrapper--no-js .mobile-menu__list {
     display: block;
   }
 }
