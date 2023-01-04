@@ -54,6 +54,7 @@ const pageBody = document.querySelector('.page-body');
 let openButton = header.querySelector('.mobile-menu__button');
 let toggleMenu = document.querySelector('.mobile-wrapper');
 let closeButton = menu.querySelector('.mobile-menu__button');
+let mobileMenuButton = document.querySelectorAll('.mobile-menu__link');
 
 header.classList.remove('mobile-wrapper--no-js');
 toggleMenu.classList.remove('mobile-wrapper--no-js');
@@ -67,7 +68,7 @@ openButton.addEventListener('click', () => {
     toggleMenu.classList.add('visually-hidden');
     pageBody.classList.remove('scroll-hidden');
   }
-  
+
 });
 
 closeButton.addEventListener('click', () => {
@@ -78,7 +79,6 @@ closeButton.addEventListener('click', () => {
     toggleMenu.classList.add('visually-hidden');
     pageBody.classList.remove('scroll-hidden');
   }
-  
 });
 
 toggleMenu.addEventListener('click', (e) => {
@@ -88,6 +88,19 @@ toggleMenu.addEventListener('click', (e) => {
   }
 });
 
+mobileMenuButton.forEach((e) => {
+  e.addEventListener('click', () => {
+    if(toggleMenu.classList.contains('visually-hidden')) {
+      toggleMenu.classList.remove('visually-hidden');
+      pageBody.classList.add('scroll-hidden');
+    } else {
+      toggleMenu.classList.add('visually-hidden');
+      pageBody.classList.remove('scroll-hidden');
+    }
+  });
+});
+
+
 // Google Map
 
 function init() {
@@ -95,7 +108,7 @@ function init() {
     center: [59.93863506417266, 30.323117499999945],
     zoom: 17,
   });
-  
+
   map.controls.remove('geolocationControl'); // удаляем геолокацию
   map.controls.remove('searchControl'); // удаляем поиск
   map.controls.remove('trafficControl'); // удаляем контроль трафика

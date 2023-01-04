@@ -463,6 +463,7 @@ body {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  background-color: #ffffff;
 }
 
 a {
@@ -1317,6 +1318,7 @@ button,
   font-size: 14px;
   line-height: 150%;
   color: #011c40;
+  cursor: pointer;
 }
 
 .booking__form button:hover {
@@ -1475,7 +1477,7 @@ button,
 .mobile-wrapper {
   width: 100%;
   height: 100%;
-  background-color: rgba(8, 8, 8, 0.5);
+  background: rgba(0, 43, 102, 0.5);
   z-index: 12;
   position: fixed;
 }
@@ -1490,6 +1492,7 @@ button,
   background: #f9fbfd;
   padding: 20px 16px 15px;
   z-index: 4;
+  overflow: scroll;
 }
 
 .mobile-menu__list {
@@ -1838,6 +1841,10 @@ button,
     height: 20px;
   }
 
+  .footer__social-list {
+    margin-top: -9px;
+  }
+
   .footer__social-list svg {
     width: 16px;
     height: 16px;
@@ -1989,6 +1996,10 @@ button,
     margin-bottom: 30px;
   }
 
+  .cruises__item-front-image {
+    height: auto;
+  }
+
   .booking {
     padding: 20px 0 65px;
   }
@@ -2085,7 +2096,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 3px;
   }
 
   .footer__social-list {
@@ -2117,6 +2128,12 @@ button,
 
 @media (max-width: 340px) {
   .cruises__item {
+    height: 386px;
+  }
+}
+
+@media (max-width: 325px) {
+  .cruises__item-front-image {
     height: 386px;
   }
 }
