@@ -1073,6 +1073,7 @@ button,
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  height: auto;
 }
 
 .cruises__item-back {
@@ -1753,10 +1754,6 @@ button,
     left: 33px;
   }
 
-  .cruises__item-front-image {
-    height: 386px;
-  }
-
   .booking {
     padding: 50px 0 100px;
   }
@@ -1994,10 +1991,6 @@ button,
 
   .cruises__title {
     margin-bottom: 30px;
-  }
-
-  .cruises__item-front-image {
-    height: auto;
   }
 
   .booking {
